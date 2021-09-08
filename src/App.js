@@ -1,4 +1,3 @@
-import Potao from "./Potato"
 
 function App() {
   return (
@@ -8,4 +7,11 @@ function App() {
     </div>
   );
 }
+
+function Potao(){
+  return(
+      <h3>I love potato</h3>
+  );
+}
+
 export default App
