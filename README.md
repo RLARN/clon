@@ -17,4 +17,4 @@
 - 마스터에서 메인으로 바꾸기
 - 구조분해 할당
 - state 시작
-- class > render > rethrn
+- class > render > return
