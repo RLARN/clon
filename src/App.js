@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const foodILike =[
@@ -22,7 +23,11 @@ function App() {
     <div>
       {
         foodILike.map(dish => (
-          <Food key={dish.id} name={dish.name} picture={dish.Image} rating={dish.rating} />
+          <Food 
+          key={dish.id}
+          name={dish.name}
+          picture={dish.Image}
+          rating={dish.rating} />
         ))
       }
     </div>
@@ -40,6 +45,12 @@ function Food({name,picture, rating}){
       <img src = {picture} alt={name}/>
     </div>
   );
+}
+
+Food.propTypes = {
+  name: PropTypes.string.isRequired,
+  picture : PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
 }
 
 
