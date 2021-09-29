@@ -6,3 +6,8 @@
 - 외부 export
 - 내부 export
 - 
+[ 9월 15일 ] 학습내용
+
+    props
+    map 함수
+    이미지 출력
