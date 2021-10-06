@@ -26,3 +26,4 @@
 - life cycle
 - constructor 함수가 render보다 먼저 실행됨
 - loading 기능 구현
+- axios를 이용한 영화정보 불러오기
