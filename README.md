@@ -23,5 +23,6 @@
 - 생명주기함수()*
 
 [ 10월 6일 ]
--life cycle
+- life cycle
 - constructor 함수가 render보다 먼저 실행됨
+- loading 기능 구현
