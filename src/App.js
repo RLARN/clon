@@ -8,12 +8,17 @@ import React from 'react';
  };
 
 
- getMovie = () => {
-   const movie = axios.get("https://yts-proxy.now.sh/list_movies.json");
+ getMovies = async() => {
+   const{
+     data:{
+       data:{movies},
+     },
+   } = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
+   this.setState({movies, isLoading: false});
  }
 
  componentDidMount(){
-  this.getMovie();
+  this.getMovies();
  }
 
 
