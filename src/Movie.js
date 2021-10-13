@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
+import PropsTypes from 'prop-types';
 
-function Movie(){
-    return<h1></h1>;
+function Movie({ id, title, year, summary, poster}){
+    return
+    <h4>{title}</h4>;
 }
 
 Movie.propTypes = { 
     id: PropTypes.number.isRequired,
     year: PropTypes.number.isRequired,
-    title: PropTypes.number.isRequired,
-    summary: PropTypes.number.isRequired,
-    poster: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
 };
 
 export default Movie;
