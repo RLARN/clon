@@ -13,7 +13,7 @@ return<h4>{title}</h4>;
 }
 ```
 ---
-- 컴포넌트 반환하는 함수 전달(app.js )
+- 컴포넌트 반환하는 함수 전달 (app.js )
 ```javascript
   render(){
     const {isLoading, movies} = this.state;
@@ -22,7 +22,7 @@ return<h4>{title}</h4>;
     }
 ```
 ---
-- html 태그를 이용하기 위해 class 추가(movie.js)
+- html 태그를 이용하기 위해 class 추가 (movie.js)
 ```javascript
         <div className="movie">
             <img src={poster} alt={title} title={title} />
