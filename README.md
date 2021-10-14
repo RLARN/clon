@@ -22,7 +22,7 @@ return<h4>{title}</h4>;
     }
 ```
 ---
-- html 태그를 이용하기 위해 class 추가
+- html 태그를 이용하기 위해 class 추가(movie.js)
 ```javascript
         <div className="movie">
             <img src={poster} alt={title} title={title} />
@@ -43,7 +43,7 @@ return<h4>{title}</h4>;
 html 에서는 'class' 라고 사용하는 속성을 리엑트 에서는 className으로 사용한다.
 이것은 jsx와 html의 class 이름이 곂치지 않기 위함. 수업에서는 이부분을 전부 className 교체해 주었다.
 ---
-- 장르기능 추가  
+- 장르기능 추가  (movie.js)
 장르를 추가하기위해
 movie.js에 'genres' props를 추가한뒤
 genres의 prop-tyoe을 추가했다
