@@ -10,16 +10,16 @@ import './App.css'
  };
 
 
- getMovies = async() => {
+ getMovies = async() => {//시간 필요
    const{
      data:{
        data:{movies},
      },
-   } = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating')
+   } = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating')//기다려라await axios
    this.setState({movies, isLoading: false})
  };
 
- componentDidMount(){
+ componentDidMount(){//생명주기함수
   this.getMovies()
  }
 
