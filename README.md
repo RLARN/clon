@@ -1,5 +1,103 @@
 # 문동환 201840116
+\
+## [11월 3일]
+- Navigation.css 생성후, 코드 작성
+(코드생략)
+---
+- Navigation.js 에 'css' import  
+div 'className' add
 
+(Navigation.js)
+```javascript
+import React from "react";
+import './Navigation.css'
+
+function Navigation(){
+
+    return(
+        <div className="nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </div>
+    )
+}
+```
+---
+- route props 작성  
+
+라우팅 대상이 되는 컴포넌트에 넘겨주는 기본 props다.  
+
+라우트 작동 방식을 확인하기 위해 콘솔을 통해 구동방식을 점검했다.  
+
+(About.js)
+```javascript
+function About(props){
+    console.log(props)
+    return (
+    <div className="about__container">
+        <sapn>
+            About this page: I Build it becasuse it becasuse I love movies.
+        </sapn>
+        <span>- George Orwell, 1984</span>
+    </div>
+    )
+}
+```
+---
+- 실질적인 작동을 위해 Movie.js 의 코드를 수정했다.  
+
+(Movie.js)
+```javascript
+import React from 'react'
+import PropTypes from 'prop-types'
+import './Movie.css'
+import { Link } from 'react-router-dom'
+
+function Movie({ title, year, summary, poster, genres}){
+    return(
+        <div className="movie">
+            <Link
+            to = {{
+                pathname: '/movie-detail',
+                state: {year, title, summary, poster, genres}
+            }}
+            >
+            <img src={poster} alt={title} title={title} />
+            <div className="movie__data">
+                <h3 className="movie__title">{title}</h3>
+                <h5 className="movie__year">{year}</h5>
+                <ul className="monie__genres">
+                    {genres.map((genre, index) => {
+                        return <li key={index} className="movie__genre">{genre}</li>
+                    })}
+                    </ul>
+                <p className="movie__summary">{summary.slice(0, 180)}</p>
+            </div>
+            </Link>
+        </div>
+    )
+}   
+이하생략
+```
+---
+- 영화 카드를 클릭했을때 디테일 화면을 컨트롤할 Detail.js 를 생성했다.  
+(코드생략)
+---
+
+- 디테일 화면을 위한 라우트패스를 추가했다.  
+
+(App.js)
+```javascript
+.
+.
+<Route path="/movie-detail" component={Detail} />
+.
+.
+```
+  
+
+---
+/
 ## [10월 27일]
 
 - App.css 와 Movie.css를 수정  
@@ -46,6 +144,7 @@ css 코드들은 깃허브 출판사 계정에서 크롭했다.
 
 
 ---
+/
 ## [10월 13일]
 
 ---
@@ -121,11 +220,7 @@ Movie.css
 >내용은 교제 175p, 97p 에서도 여러번 언급한다.
 
 ---
----
-
-
-
-
+/
 ## [ 10월 6일 ]
 - life cycle
 - constructor 함수가 render보다 먼저 실행됨
