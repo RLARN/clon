@@ -1,9 +1,51 @@
 # 문동환 201840116
 \
 ## [11월 10일]
+- 영화제목 출력을 위한 코드수정  
+(detail.js)
+```javascript
+render() {
+    const{location} = this.props;
+      return <span>{location.state.title}</span>;
+```
+영화 데이터가 들어있는 location.state에서 받아서 출력한다.
 
+---
 
+- 영화 정보가 없을때 나타나는 오류 코드수정  
+(detail.js)
+```javascript
+render() {
+    const{location} = this.props;
+    if(location.state){
+      return <span>{location.state.title}</span>;
+    }else{
+      return null;
+    }
+```
+---
+- 깃허브 배포를 위한 홈페이지 주소. "https://RLARN.github.io/clon"
+- package.json 수정
+```javascript
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm rub build",
+    "deploy": "gh-pages -d build"
+  },
+```
+- 영화앱 배포 과정에서 오류가 발생한다. (cmd)
+```javascript
+npm run deploy
+> movie_app_2021-4@0.1.0 predeploy
+> npm rub build
+Unknown command: "rub"
+```
+rub 는 입력한적도 없는데 언노운 커맨드라고 표시된다. 인터넷에 검색해도 나오지 않는다.
 
+---
+\
+---
 ## [11월 3일]
 - Navigation.css 생성후, 코드 작성
 (코드생략)
