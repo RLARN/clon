@@ -1,5 +1,8 @@
 # 문동환 201840116
 \
+
+패키지 제이슨 오타 수정
+
 ## [11월 10일]
 - 영화제목 출력을 위한 코드수정  
 (detail.js)
@@ -30,7 +33,7 @@ render() {
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm rub build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
 ```
