@@ -1,7 +1,22 @@
 # 문동환 201840116
 \
+## [11월 17일]
+- 홈패이지 배포 실패 오류 수정  
+package.json 코드중 오탈자 때문인 것으로 판단, 코드 수정완료
+```javascript
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+```
 
-패키지 제이슨 오타 수정
+https://RLARN.github.io/clon
+
+홈패이지에 접속해보면 잘 접속된다.
+
+---
 
 ## [11월 10일]
 - 영화제목 출력을 위한 코드수정  
@@ -33,7 +48,7 @@ render() {
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
+    "predeploy": "npm rub build",
     "deploy": "gh-pages -d build"
   },
 ```
