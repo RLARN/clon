@@ -14,7 +14,10 @@ package.json 코드중 오탈자 때문인 것으로 판단, 코드 수정완료
 
 https://RLARN.github.io/clon
 
-홈패이지에 접속해보면 잘 접속된다.
+홈패이지에 접속해보면 잘 접속된다.  
+/
+### timer.html
+- componentWillUnmount() {// 끝난다음에 실행(렌더링 이후) 가비지 처리, Close
 
 ---
 
@@ -320,4 +323,5 @@ Movie.css
 - 커밋 
 - 외부 export
 - 내부 export
+-  npm install
 ---

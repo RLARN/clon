@@ -26,7 +26,7 @@ class Timer extends React.Component {
       this.interval = setInterval(() => this.tick(), 1000); //1초마다 tick함수 발동
     }
   
-    componentWillUnmount() {
+    componentWillUnmount() {// 끝난다음에 실행(렌더링 이후) 가비지 처리, Close
       clearInterval(this.interval);
     }
   
